@@ -2,6 +2,9 @@ import { tasklist } from "tasklist";
 import schedule from 'node-schedule';
 import TelegramBot from 'node-telegram-bot-api';
 import fetch from "node-fetch";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const token = '6127294994:AAFcv24fMSFOKNIOwB-V6Gf8QHqrttN_HwE';
 const bot = new TelegramBot(token, {polling: true});
