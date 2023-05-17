@@ -28,9 +28,7 @@ const checkIsPlayingJob = schedule.scheduleJob('*/10 * * * * *', async function(
     const curDate = new Date();
     if (curDate.getDate() !== 0 || curDate.getDate() !== 6) {
         if (tasklistArr.some(checkIfTaskWithinGames)) {
-            // const message = await bot.sendMessage("-1001800091038", `Челлендж был нарушен игра ${game} была запущена только что.`)
-
-            await fetch(`https://84c4-147-30-30-238.ngrok-free.app/game-was-opened?game=${game}`, {method: "POST"});
+            await fetch(`${process.env.CHALLENGE_COORDINATOR_URL}/game-was-opened?game=${game}`, {method: "POST"});
         }
     }
 
