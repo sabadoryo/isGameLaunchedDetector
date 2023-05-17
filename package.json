@@ -1,0 +1,20 @@
+{
+  "name": "isplayingbot",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^6.3.0",
+    "install": "^0.13.0",
+    "node-fetch": "^3.3.1",
+    "node-schedule": "^2.1.1",
+    "node-telegram-bot-api": "^0.61.0",
+    "tasklist": "^5.0.0"
+  }
+}
