@@ -6,8 +6,8 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const token = '6127294994:AAFcv24fMSFOKNIOwB-V6Gf8QHqrttN_HwE';
-const bot = new TelegramBot(token, {polling: true});
+const token = process.env.token;
+const bot = new TelegramBot(token, {polling: false});
 
 const GAMES = [
     "dota2.exe",
@@ -37,7 +37,3 @@ const checkIsPlayingJob = schedule.scheduleJob('*/10 * * * * *', async function(
     }
 
 });
-
-bot.on("message", (msg) => {
-    console.log(msg);
-})
